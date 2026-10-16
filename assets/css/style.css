@@ -618,8 +618,8 @@ html.lenis [id] { scroll-margin-top: 0; }
 /* Ajuste do Armin (16/10/2026): no celular/tablet a foto entra no meio do herói, entre o título e o texto.
    Mesma imagem do computador (mesma URL: baixa uma vez só). */
 .heroi__foto-celular {
-  margin-top: var(--space-5); aspect-ratio: 1 / 1; border-radius: var(--raio-2);
-  border: 1px solid rgba(196, 167, 107, .35);
+  margin-top: var(--space-5); aspect-ratio: 1 / 1; border-radius: 16px;
+  border: 2px solid var(--gold);   /* mesmo dourado do rótulo do herói (pedido do Armin, 16/10) */
 }
 .heroi__foto-celular img { object-position: 50% 30%; }
 @media (max-width: 899px) {
