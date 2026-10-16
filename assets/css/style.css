@@ -614,3 +614,21 @@ html.lenis [id] { scroll-margin-top: 0; }
 .galeria--unica { grid-template-columns: minmax(0, 1fr); }
 .galeria--unica .galeria__grande { height: auto; }
 .galeria--unica .galeria__grande .midia { aspect-ratio: 16 / 10; height: auto; }
+
+/* Ajuste do Armin (16/10/2026): no celular/tablet a foto entra no meio do herói, entre o título e o texto.
+   Mesma imagem do computador (mesma URL: baixa uma vez só). */
+.heroi__foto-celular {
+  margin-top: var(--space-5); aspect-ratio: 1 / 1; border-radius: var(--raio-2);
+  border: 1px solid rgba(196, 167, 107, .35);
+}
+.heroi__foto-celular img { object-position: 50% 30%; }
+@media (max-width: 899px) {
+  .heroi__visual { display: none; }
+  .heroi__texto { padding-bottom: var(--space-8); }
+}
+@media (max-width: 399px) {
+  .heroi__foto-celular { margin-top: var(--space-4); }
+}
+@media (min-width: 900px) {
+  .heroi__foto-celular { display: none; }
+}
