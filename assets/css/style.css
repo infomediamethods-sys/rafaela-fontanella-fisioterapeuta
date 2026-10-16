@@ -213,18 +213,6 @@ strong { font-weight: 500; }
 .heroi__visual { display: grid; background: var(--cream); }
 .heroi__foto { aspect-ratio: auto; height: clamp(200px, 30svh, 260px); }
 .heroi__foto img { object-position: 40% 40%; }
-.ladrilhos { display: grid; grid-template-columns: 1fr 1fr; }
-.ladrilho { border: 1px solid var(--cream); }  /* fio de 2px entre ladrilhos (Kit), como borda e não como gap */
-.ladrilho {
-  display: grid; align-content: center; gap: var(--space-1);
-  padding: var(--space-5) var(--space-4); min-height: 120px; background: var(--cream-dark); color: var(--forest);
-}
-.ladrilho b { white-space: nowrap; font-variant-numeric: lining-nums; font-family: var(--font-titulo); font-size: clamp(1.5rem, 5vw, 2.25rem); font-weight: 500; line-height: 1.05; }
-.ladrilho span { font-size: 0.75rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; line-height: 1.4; }
-.ladrilho--verde { background: var(--forest-mid); color: var(--warm-white); }
-.ladrilho--verde span { color: var(--sage-light); }
-.ladrilho--tom { background: var(--warm-white); }
-.ladrilho--salvia { background: var(--sage-light); }
 @media (max-width: 399px) {
   .heroi__texto { padding-top: calc(var(--header-h) + var(--space-4)); }
   .heroi__apoio, .heroi .botoes { margin-top: var(--space-4); }
@@ -243,8 +231,6 @@ strong { font-weight: 500; }
   .heroi__foto { height: auto; min-height: 0; border-radius: var(--raio-2); }
   .heroi__foto picture, .heroi__foto img { position: absolute; inset: 0; }
   .heroi__foto img { object-position: 30% 38%; }
-  .ladrilho { min-height: 104px; padding: var(--space-4) var(--space-5); }
-  .ladrilho b { font-size: 1.75rem; }
 }
 
 /* ---------- Prova ---------- */
@@ -567,11 +553,9 @@ html.lenis [id] { scroll-margin-top: 0; }
 @media (max-width: 359px) {
   .cabecalho__cta { display: none; }   /* abaixo de 360 o botão fixo de WhatsApp cobre o contato; o menu não pode ser esmagado */
   .heroi h1 { font-size: 3rem; }
-  .ladrilho b { font-size: 1.375rem; }
 }
 @media (max-width: 899px) {
   .heroi__foto img { object-position: 40% 15%; }
-  .ladrilho { padding-inline: var(--space-5); }
 }
 @media (min-width: 600px) and (max-width: 899px) {
   .heroi__texto { padding-inline: max(var(--gutter), calc((100% - var(--container-tablet)) / 2)); }
@@ -584,9 +568,44 @@ html.lenis [id] { scroll-margin-top: 0; }
 /* ---------- Rodada 3 do revisor-design ---------- */
 @media (max-width: 899px) {
   .heroi { grid-template-columns: minmax(0, 1fr); }
-  .ladrilhos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .ladrilho { padding-inline: var(--gutter); }
 }
 @media (min-width: 600px) and (max-width: 899px) {
   main .container--estreito { width: min(100% - 2 * var(--gutter), var(--container-tablet)); }
+}
+
+/* ---------- Ajuste do Armin (16/10/2026): herói meio verde, meio foto; informações saem do herói ---------- */
+.heroi { background: var(--forest); }
+.heroi__visual { display: grid; background: var(--forest); padding: 0; }
+.heroi__foto, .heroi__foto img { border-radius: 0; }
+.heroi__foto { height: min(125vw, 85svh); }
+.heroi__foto img, .heroi__foto picture > img { object-position: 50% 22%; }
+@media (min-width: 900px) {
+  .heroi__visual { grid-template-rows: none; padding: var(--header-h) 0 0; gap: 0; }
+  .heroi__foto { height: auto; }
+  .heroi__foto img, .heroi__foto picture > img { object-position: 50% 30%; }
+}
+/* Faixa de informações (nota, registro, horário, local), logo abaixo do herói */
+.info-faixa {
+  display: grid; gap: var(--space-4);
+  padding-block: var(--space-5); border-block: 1px solid var(--cream-dark);
+}
+.info { display: flex; align-items: center; gap: var(--space-3); min-width: 0; }
+.info__icone {
+  flex: none; display: grid; place-items: center; width: var(--toque-min); height: var(--toque-min);
+  border-radius: 50%; background: var(--forest); color: var(--gold);
+}
+.info__icone .icone { width: var(--icone-linha); height: var(--icone-linha); }
+.info--nota .info__icone .icone { fill: currentColor; }
+.info p { display: grid; gap: 2px; min-width: 0; }
+.info b {
+  font-family: var(--font-titulo); font-size: 1.375rem; font-weight: 500; line-height: 1.15;
+  color: var(--forest); font-variant-numeric: lining-nums;
+}
+.info p > span { font-size: 0.8125rem; line-height: 1.4; color: var(--text); }
+@media (min-width: 900px) {
+  .info-faixa { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5) var(--space-6); padding-block: var(--space-6); }
+}
+@media (min-width: 1200px) {
+  .info-faixa { grid-template-columns: repeat(4, auto); justify-content: space-between; gap: var(--space-5); }
+  .info + .info { border-left: 1px solid var(--cream-dark); padding-left: var(--space-5); }
 }
