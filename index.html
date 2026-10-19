@@ -17,6 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" media="(max-width: 899px)" imagesrcset="assets/img/heroi-retrato-480.webp 480w, assets/img/heroi-retrato-960.webp 960w" imagesizes="100vw">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/style.css?v=20261019a">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Physiotherapy", "@id": "#consultorio", "name": "Rafaela Fontanella | Fisioterapeuta", "telephone": "+55 48 99681-1828", "image": "assets/img/consultorio-sala.jpg", "address": {"@type": "PostalAddress", "streetAddress": "Av. Trompowsky, 291, Torre 1, Sala 501, Ed. Trompowsky Corporate, Life Medical Tower", "addressLocality": "Florianópolis", "addressRegion": "SC", "postalCode": "88015-300", "addressCountry": "BR"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "19:00"}], "sameAs": ["https://www.instagram.com/rafafontanellafisio/"]}, {"@type": "Person", "name": "Rafaela Fontanella", "jobTitle": "Fisioterapeuta", "identifier": {"@type": "PropertyValue", "propertyID": "CREFITO-10", "value": "372549-F"}, "worksFor": {"@id": "#consultorio"}, "sameAs": ["https://www.instagram.com/rafafontanellafisio/"]}]}</script>
@@ -52,9 +53,10 @@
       <h1 class="entrar" style="--atraso:.2s">Equilíbrio se treina, <em>com paciência</em>.</h1>
       <div class="midia heroi__foto-celular entrar entrar--fade" style="--atraso:.3s">
         <picture>
-          <source srcset="assets/img/heroi-retrato.webp" type="image/webp">
-          <img src="assets/img/heroi-retrato.jpg" width="1600" height="2000" alt="Rafaela Fontanella, de jaleco, no consultório, diante da placa com o seu nome">
-        </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/heroi-retrato-480.webp 480w, assets/img/heroi-retrato-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/heroi-retrato-960.webp 960w, assets/img/heroi-retrato-1600.webp 1600w" sizes="100vw">
+  <img src="assets/img/heroi-retrato-960.jpg" width="1600" height="2000" alt="Rafaela Fontanella, de jaleco, no consultório, diante da placa com o seu nome" decoding="async" fetchpriority="high">
+</picture>
       </div>
       <p class="heroi__apoio entrar" style="--atraso:.35s">Fisioterapia para pessoas idosas e para adultos com dor nas articulações. Cada exercício pensado para as atividades do dia a dia.</p>
       <div class="botoes entrar" style="--atraso:.5s">
@@ -67,9 +69,10 @@
     <div class="heroi__visual entrar entrar--fade" style="--atraso:.3s">
       <div class="midia heroi__foto">
         <picture>
-          <source srcset="assets/img/heroi-retrato.webp" type="image/webp">
-          <img src="assets/img/heroi-retrato.jpg" width="1600" height="2000" alt="Rafaela Fontanella, de jaleco, no consultório, diante da placa com o seu nome" fetchpriority="high">
-        </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/heroi-retrato-480.webp 480w, assets/img/heroi-retrato-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/heroi-retrato-960.webp 960w, assets/img/heroi-retrato-1600.webp 1600w" sizes="50vw">
+  <img src="assets/img/heroi-retrato-960.jpg" width="1600" height="2000" alt="Rafaela Fontanella, de jaleco, no consultório, diante da placa com o seu nome" decoding="async">
+</picture>
       </div>
     </div>
   </section>
@@ -98,7 +101,11 @@
         <div class="sobre__assinatura">
           <span class="assinatura">Rafaela Fontanella</span>
           <div class="avatar-cartao">
-            <div class="midia proporcao-avatar"><picture><source srcset="assets/img/sobre-avatar.webp" type="image/webp"><img src="assets/img/sobre-avatar.jpg" width="400" height="400" alt="" sizes="56px" loading="lazy" decoding="async"></picture></div>
+            <div class="midia proporcao-avatar"><picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/sobre-avatar-480.webp 480w, assets/img/sobre-avatar-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/sobre-avatar-960.webp 960w" sizes="50vw">
+  <img src="assets/img/sobre-avatar-960.jpg" width="400" height="400" alt="" sizes="56px" decoding="async">
+</picture></div>
             <p><strong>Fisioterapeuta</strong>CREFITO-10/372549-F</p>
           </div>
         </div>
@@ -120,7 +127,11 @@
       </div>
       <ul class="servicos surgir" role="list">
         <li class="servico" style="--i:0">
-          <div class="midia"><picture><source srcset="assets/img/servico-idosos.webp" type="image/webp"><img src="assets/img/servico-idosos.jpg" width="1600" height="1200" alt="Mão de uma pessoa idosa apoiada num corrimão de madeira" sizes="(min-width: 900px) 33vw, 100vw" loading="lazy" decoding="async"></picture></div>
+          <div class="midia"><picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/servico-idosos-480.webp 480w, assets/img/servico-idosos-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/servico-idosos-960.webp 960w, assets/img/servico-idosos-1600.webp 1600w" sizes="50vw">
+  <img src="assets/img/servico-idosos-960.jpg" width="1600" height="1200" alt="Mão de uma pessoa idosa apoiada num corrimão de madeira" sizes="(min-width: 900px) 33vw, 100vw" decoding="async" loading="lazy">
+</picture></div>
           <div class="servico__corpo">
             <span class="icone-circulo"><svg aria-hidden="true" focusable="false" class="icone icone--footprints" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" ><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z" /><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z" /><path d="M16 17h4" /><path d="M4 13h4" /></svg></span>
             <h3>Fisioterapia para idosos</h3>
@@ -129,7 +140,11 @@
           </div>
         </li>
         <li class="servico" style="--i:1">
-          <div class="midia"><picture><source srcset="assets/img/servico-reumaticas.webp" type="image/webp"><img src="assets/img/servico-reumaticas.jpg" width="1600" height="1200" alt="Bola de exercício, toalha e faixa elástica sobre um banco de madeira" sizes="(min-width: 900px) 33vw, 100vw" loading="lazy" decoding="async"></picture></div>
+          <div class="midia"><picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/servico-reumaticas-480.webp 480w, assets/img/servico-reumaticas-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/servico-reumaticas-960.webp 960w, assets/img/servico-reumaticas-1600.webp 1600w" sizes="50vw">
+  <img src="assets/img/servico-reumaticas-960.jpg" width="1600" height="1200" alt="Bola de exercício, toalha e faixa elástica sobre um banco de madeira" sizes="(min-width: 900px) 33vw, 100vw" decoding="async" loading="lazy">
+</picture></div>
           <div class="servico__corpo">
             <span class="icone-circulo"><svg aria-hidden="true" focusable="false" class="icone icone--hand" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" ><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" /><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" /><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" /><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" /></svg></span>
             <h3>Doenças reumáticas</h3>
@@ -138,7 +153,11 @@
           </div>
         </li>
         <li class="servico" style="--i:2">
-          <div class="midia"><picture><source srcset="assets/img/servico-ortopedia.webp" type="image/webp"><img src="assets/img/servico-ortopedia.jpg" width="1600" height="1200" alt="Rolo de espuma e halteres leves no piso, ao pé de um espaldar de madeira" sizes="(min-width: 900px) 33vw, 100vw" loading="lazy" decoding="async"></picture></div>
+          <div class="midia"><picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/servico-ortopedia-480.webp 480w, assets/img/servico-ortopedia-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/servico-ortopedia-960.webp 960w, assets/img/servico-ortopedia-1600.webp 1600w" sizes="50vw">
+  <img src="assets/img/servico-ortopedia-960.jpg" width="1600" height="1200" alt="Rolo de espuma e halteres leves no piso, ao pé de um espaldar de madeira" sizes="(min-width: 900px) 33vw, 100vw" decoding="async" loading="lazy">
+</picture></div>
           <div class="servico__corpo">
             <span class="icone-circulo"><svg aria-hidden="true" focusable="false" class="icone icone--activity" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" ><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /></svg></span>
             <h3>Equilíbrio e mobilidade</h3>
@@ -155,7 +174,11 @@
 
   <section class="secao fundo-tom" id="situacoes">
     <div class="container situacoes__grade">
-      <div class="midia situacoes__foto surgir-img revelar"><picture><source srcset="assets/img/situacoes-luz.webp" type="image/webp"><img src="assets/img/situacoes-luz.jpg" width="1200" height="1504" alt="Poltrona de madeira junto a uma janela com cortina clara e um par de tênis no chão" sizes="(min-width: 900px) 40vw, 100vw" loading="lazy" decoding="async"></picture></div>
+      <div class="midia situacoes__foto surgir-img revelar"><picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/situacoes-luz-480.webp 480w, assets/img/situacoes-luz-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/situacoes-luz-960.webp 960w" sizes="50vw">
+  <img src="assets/img/situacoes-luz-960.jpg" width="1200" height="1504" alt="Poltrona de madeira junto a uma janela com cortina clara e um par de tênis no chão" sizes="(min-width: 900px) 40vw, 100vw" decoding="async" loading="lazy">
+</picture></div>
       <div>
         <div class="cabeca revelar">
           <p class="rotulo">Situações comuns</p>
@@ -211,7 +234,11 @@
       </div>
       <div class="galeria galeria--unica">
         <figure class="galeria__grande surgir-img revelar">
-          <div class="midia"><picture><source srcset="assets/img/consultorio-sala.webp" type="image/webp"><img src="assets/img/consultorio-sala.jpg" width="2000" height="1250" alt="Rafaela Fontanella em pé na sala de atendimento, com mesa, poltronas, espaldar de madeira e maca" sizes="(min-width: 900px) 80vw, 100vw" loading="lazy" decoding="async"></picture></div>
+          <div class="midia"><picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/consultorio-sala-480.webp 480w, assets/img/consultorio-sala-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/consultorio-sala-960.webp 960w, assets/img/consultorio-sala-1600.webp 1600w" sizes="50vw">
+  <img src="assets/img/consultorio-sala-960.jpg" width="2000" height="1250" alt="Rafaela Fontanella em pé na sala de atendimento, com mesa, poltronas, espaldar de madeira e maca" sizes="(min-width: 900px) 80vw, 100vw" decoding="async" loading="lazy">
+</picture></div>
           <figcaption>A sala de atendimento</figcaption>
         </figure>
       </div>
@@ -239,7 +266,11 @@
         </div>
       </div>
       <figure class="onde__foto surgir-img revelar">
-        <div class="midia"><picture><source srcset="assets/img/onde-recepcao.webp" type="image/webp"><img src="assets/img/onde-recepcao.jpg" width="1161" height="871" alt="Hall de entrada do Life Medical Tower, com balcão de recepção e piso de mármore" sizes="(min-width: 900px) 55vw, 100vw" loading="lazy" decoding="async"></picture></div>
+        <div class="midia"><picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/onde-recepcao-480.webp 480w, assets/img/onde-recepcao-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/onde-recepcao-960.webp 960w" sizes="50vw">
+  <img src="assets/img/onde-recepcao-960.jpg" width="1161" height="871" alt="Hall de entrada do Life Medical Tower, com balcão de recepção e piso de mármore" sizes="(min-width: 900px) 55vw, 100vw" decoding="async" loading="lazy">
+</picture></div>
         <figcaption>Recepção do Life Medical Tower</figcaption>
       </figure>
     </div>
@@ -280,7 +311,11 @@
         </div>
       </div>
       <div class="duvidas__lado revelar">
-        <div class="midia"><picture><source srcset="assets/img/duvidas-mesa.webp" type="image/webp"><img src="assets/img/duvidas-mesa.jpg" width="1600" height="1200" alt="Mesa de madeira com um caderno aberto, um copo de água e uma xícara" sizes="(min-width: 900px) 40vw, 100vw" loading="lazy" decoding="async"></picture></div>
+        <div class="midia"><picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/duvidas-mesa-480.webp 480w, assets/img/duvidas-mesa-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/duvidas-mesa-960.webp 960w, assets/img/duvidas-mesa-1600.webp 1600w" sizes="50vw">
+  <img src="assets/img/duvidas-mesa-960.jpg" width="1600" height="1200" alt="Mesa de madeira com um caderno aberto, um copo de água e uma xícara" sizes="(min-width: 900px) 40vw, 100vw" decoding="async" loading="lazy">
+</picture></div>
         <div class="cartao-duvida">
           <h3>Ainda tem dúvida?</h3>
           <p>Escreva pelo WhatsApp e conte o que precisa.</p>
