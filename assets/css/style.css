@@ -632,3 +632,8 @@ html.lenis [id] { scroll-margin-top: 0; }
 @media (min-width: 900px) {
   .heroi__foto-celular { display: none; }
 }
+
+/* Ajuste do Armin (19/10/2026): espaço grande demais entre o cabeçalho e o título do herói no celular/tablet */
+@media (max-width: 899px) {
+  .heroi__texto { padding-top: calc(var(--header-h) + var(--space-2)); }
+}
