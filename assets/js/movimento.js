@@ -46,6 +46,15 @@
     });
   });
 
+  /* Fotos já decodificadas antes de entrar na tela (ajuste de 19/10/2026: rolagem rápida dava tranco quando uma
+     foto grande era decodificada no instante em que aparecia). Vale para celular e computador. */
+  var predecodificar = function (img) {
+    if (!img.decode) return;
+    var ir = function () { img.decode().catch(function () {}); };
+    if (img.complete && img.naturalWidth) ir(); else img.addEventListener('load', ir, { once: true });
+  };
+  window.addEventListener('load', function () { document.querySelectorAll('main img').forEach(predecodificar); });
+
   if (reduzir) return;
 
   /* Herói: entrada ao carregar */
