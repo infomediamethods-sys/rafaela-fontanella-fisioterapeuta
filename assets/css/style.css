@@ -643,3 +643,8 @@ html.lenis [id] { scroll-margin-top: 0; }
 @media (max-width: 899px) {
   [data-header][data-rolado] { -webkit-backdrop-filter: none; backdrop-filter: none; background: rgba(28, 46, 32, 0.96); }
 }
+
+/* Ajuste do Armin (19/10/2026): imagens pareciam carregar lento. Era a animação, não o download:
+   a foto do herói ficava invisível 1,5s (fade de 1,2s + atraso) e as fotos das seções tinham um 2º fade de 1s
+   por cima da entrada da seção. Agora a foto do herói aparece na hora e as das seções só entram com a seção (0,42s). */
+.js .surgir-img .midia img, .js .surgir-img.visivel .midia img { opacity: 1; transition: transform .8s var(--ease); }
